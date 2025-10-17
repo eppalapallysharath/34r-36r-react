@@ -1,0 +1,16 @@
+.nav-main-container{
+    display: flex;
+    height: 60px;
+    background-color: #ffff;
+    justify-content: space-around;
+    box-shadow: 0 0 16px #00000026;
+    align-items: center;
+}
+
+.nav-sub-container2{
+    display: flex;
+    gap: 10px;
+}
+.nav-sub-container2 > p{
+    font-size: 12px;
+}
