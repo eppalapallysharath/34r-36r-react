@@ -5,10 +5,10 @@ import {Style} from "./Components/Stylings"
 class App extends Component{
     render(){
         return <>
-            {/* <Images/> */}
-            {/* <Child1/>
+        <Images/>   
+            <Child1/>
             <Child2/>
-            <h1>num  {a}</h1> */}
+            <h1>num  {a}</h1>
             <Style/>
         </>
     }
