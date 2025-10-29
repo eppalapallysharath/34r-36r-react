@@ -1,0 +1,9 @@
+.main-container-dummy{
+     box-shadow: 0 0 1rem rgb(11, 11, 163);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    padding: 2rem 1rem;
+}
