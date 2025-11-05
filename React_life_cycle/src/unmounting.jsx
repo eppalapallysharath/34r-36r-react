@@ -4,7 +4,7 @@ import axios from "axios"
 export class UserCards extends Component {
     constructor(){
         super();
-        this.state = {usersData:[]}
+        this.state = {usersData:[], time:""}
     }
 
     controller = new AbortController() 
@@ -23,19 +23,19 @@ export class UserCards extends Component {
         console.log("componentWillUnmount")
         
     }
-
+    log(){
+        this.logger = "sharath"
+    }
 
     componentDidMount(){
         this.fetchUsers() 
+        setInterval(()=>{console.log("time running")}, 2000)
         this.time =  setInterval(()=>{console.log("time running")}, 2000)
         console.log("componentDidMount")
     }
 
-
-
-
     render(){
-        console.log(this.state.usersData)
+        console.log(this)
         return <div>
             <p>user cards component</p>
             <div>
@@ -44,6 +44,7 @@ export class UserCards extends Component {
                         <p>Username {item.username}</p>
                         <p>Email {item.email}</p>
                     </div>)}
+                    <button onClick={this.log}>click</button>
             </div>
         </div>
     }
