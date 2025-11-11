@@ -6,8 +6,7 @@ export const Register = () => {
   const [password, setPassword] = useState("");
   const [gender, setGender] = useState("");
   const [userData, setUserData] = useState({})
-  const [userList, setuserList] = useState(localStorage.getItem("users") || [])
-
+  const [userList, setuserList] = useState(JSON.parse(localStorage.getItem("users")) || [])
 
     const handleSubmit = (e)=>{
         e.preventDefault()
@@ -76,3 +75,7 @@ export const Register = () => {
     </>
   );
 };
+
+
+// ?  ??  ?. 
+// console.log(null ?? "sharath" ) 
