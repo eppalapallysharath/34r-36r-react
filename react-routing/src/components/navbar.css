@@ -1,0 +1,17 @@
+.nav-container{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 1rem;
+    background-color: orange;
+}
+
+/* a{
+    text-decoration: none;
+    color: blanchedalmond;
+} */
+
+.item{
+    text-decoration: none;
+    color: brown;
+}
