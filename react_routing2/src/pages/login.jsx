@@ -12,7 +12,7 @@ export const Login = () => {
     const credential = {
       user: "sharath",
       pass: "sharath@12345",
-    };
+    }; 
     if (username === credential.user && password === credential.pass) {
       toast.success("Login successfully");
       navigate("/products", {state:credential})
