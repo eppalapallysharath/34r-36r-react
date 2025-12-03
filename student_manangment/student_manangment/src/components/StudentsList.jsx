@@ -26,21 +26,66 @@ export const StudentsList = () => {
   }
 
   return (
-    <div>
-      <h4>Stuidents list</h4>
-      {
-        students.length > 0 ? students.map(item => <div key={item.sid} style={{border: "1px solid black"}}>
-          <div  onClick={()=>navigate("/student/"+item.sid)}>
-            <p>student name {item.name}</p>
-          <p>student age {item.age}</p>
-          <p>student locations {item.location}</p>
-          </div>
-          <div>
-            <button onClick={()=>navigate("/editStudent/"+item.sid)}>Edit</button>
-            <button onClick={()=>deleteStudent(item.sid)}>Delete</button>
-          </div>
-        </div>) : <h4>Loading...</h4>
-      }
-    </div>
+   <div style={{ padding: "20px" }}>
+  <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Students List</h2>
+
+  {students.length > 0 ? (
+    students.map(item => (
+      <div 
+        key={item.sid}
+        style={{
+          border: "1px solid #ddd",
+          padding: "15px",
+          margin: "10px auto",
+          width: "500px",
+          borderRadius: "10px",
+          background: "#ffffff",
+          boxShadow: "0 2px 6px rgba(0,0,0,0.1)"
+        }}
+      >
+        <div 
+          onClick={() => navigate("/student/" + item.sid)}
+          style={{ cursor: "pointer" }}
+        >
+          <p><strong>Name:</strong> {item.name}</p>
+          <p><strong>Age:</strong> {item.age}</p>
+          <p><strong>Location:</strong> {item.location}</p>
+        </div>
+
+        <div style={{ marginTop: "10px", display: "flex", gap: "10px" }}>
+          <button 
+            onClick={() => navigate("/editStudent/" + item.sid)}
+            style={{
+              padding: "8px 15px",
+              background: "#ffc107",
+              border: "none",
+              borderRadius: "6px",
+              cursor: "pointer"
+            }}
+          >
+            Edit
+          </button>
+
+          <button 
+            onClick={() => deleteStudent(item.sid)}
+            style={{
+              padding: "8px 15px",
+              background: "#dc3545",
+              color: "white",
+              border: "none",
+              borderRadius: "6px",
+              cursor: "pointer"
+            }}
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    ))
+  ) : (
+    <h4 style={{ textAlign: "center" }}>Loading...</h4>
+  )}
+</div>
+
   )
 }
