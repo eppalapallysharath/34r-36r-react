@@ -7,7 +7,8 @@ import { EditStudent } from './components/EditStudent'
 import { Student } from './components/student'
 import { Navbar } from './components/Navbar'
 import { ToastContainer } from 'react-toastify'
-export const baseurl = "http://localhost:8080"
+// export const baseurl = "http://localhost:8080"
+export const baseurl = "https://student-management-spring-boot.onrender.com"
 const App = () => {
   return (
     <>
